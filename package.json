@@ -7,13 +7,15 @@
     "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm-run-all test:*",
+	"test:html": "html-validate *.html",
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "html-validate": "^2.23.0",
     "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5"
   }
